@@ -16,11 +16,11 @@ const Search = () => {
     );
     
     return (
-        <div className="tc pa2">
+        <div className="tc pa2 ">
             <input
-                className="ba b--green bg-lightest-blue pa3"
+                className="ba b--green bg-lightest-grey pa3"
                 type="search"
-                placeholder="Search robots by name or email"
+                placeholder="Search robots by Name"
                 value={searchInput}
                 onChange={onSearchChange}
             />

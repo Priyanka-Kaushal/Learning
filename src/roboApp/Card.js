@@ -1,17 +1,5 @@
 import React from "react";
 
-// function Card(){
-//     return(
-//     <div>
-
-
-
-
-
-//     </div>
-//     );
-// }
-
 
 // const Card = (props) => {
     const Card = ({name, email, id}) => {

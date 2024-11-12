@@ -64,9 +64,11 @@ function Login() {
     } 
     // else if (!new_pass.match(upperCase)) {
     //   setErrorpswrdMsg("Password should contain uppercase letters!");
-    // } else if (!new_pass.match(numbers)) {
+    // } 
+    // else if (!new_pass.match(numbers)) {
     //   setErrorpswrdMsg("Password should contain numbers!");
-    // } else if (new_pass.length < 10) {
+    // } 
+    // else if (new_pass.length < 10) {
     //   setErrorpswrdMsg("Password length should be at least 10 characters.");
     // } 
     else {
@@ -74,8 +76,14 @@ function Login() {
     }
   };
 
+  // https://reqres.in/api/login
 
-  //  post api 
+
+  //  post api email and password
+  // {  
+  //   "email": "eve.holt@reqres.in",  
+  //   "password": "pistol"  
+  // }  
   const handleTheApi = () =>{
   console.log(values, valuesPassword);
      axios.post('https://reqres.in/api/login', {
@@ -91,6 +99,9 @@ function Login() {
       console.log(error);
      });
   }
+
+
+
 
 
   return (
