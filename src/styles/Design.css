@@ -30,6 +30,9 @@
   .signInForm{
     font-size: var(--h3);
   }
+
+
+  /* ------------------------------------------------------------------------------- */
 /* main section */
 .mainSec{
  background-color: var(--background-color);
@@ -39,9 +42,14 @@
  justify-content: center;
  margin:auto;
  margin-top:20px;
- padding:10px;
  border-radius:5px;
+ width: 500px;
+ padding: 50px;
+ height:auto;
 }
+
+/* -------------------------------------------------------------------------------------- */
+
 
 /* for hover on the box shadow */
 .mainSec:hover{
@@ -56,19 +64,11 @@
   width: 50%;
 }
 
-/*  for input box */
-.labdesign{
- margin-bottom: 20px;
- /* width:max-content; */
- padding: 10px 2px;
- width: 100%;
-}
-
-.sec-2{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+input[type=text], input[type=password]{
+  margin-bottom: 20px;
+  padding: 10px 2px;
+  width: 100%;
+ }
 
 
 .buttonDesign{
@@ -83,26 +83,33 @@
   cursor: pointer;
 }
 
-.alertBox {
-  margin:auto;
-  padding: 14px 20px;
-  color: white;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  /* float: right; */
-  font-size: 22px;
-  line-height: 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  background-color: red;
-}
+
 
 .errorMsg{
   color: red;
+  margin: 0px 50px 5px 0px;
 }
 
 .p{
   max-width: 100%;
 }
+
+
+
+
+
+
+
+.prodCards{
+  width: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap-reverse; */ 
+  padding: 20px;
+  margin: 8px;
+  align-items: center;
+
+}
+

@@ -1,0 +1,28 @@
+
+.Maineader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    /* Green background */
+    /* color: #fff; */
+}
+
+
+.logoSize{
+    max-width: 100px;
+    padding-left: 40px;
+}
+
+.titleName{
+    font-family: var(--h1);
+    font-style: italic;
+    padding-right: 40px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}

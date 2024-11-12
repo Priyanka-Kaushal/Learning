@@ -1,16 +1,18 @@
 import '../styles/Design.css';
 import React, { useState } from "react";
 import axios from 'axios';
-// import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-/**
- * Function to validate email using regex
- */
+
 
 function Login() {
-  const title = "Welcome";
+  const  title = "Welcome";
   const signIn = "Sign In";
   const image = "./decipherZoneLogo.png";
+
+
+
+  const navogateUrl  = useNavigate();
 
   // State to hold email, password, and errors
   const [values, setValues] = useState({ email: "" });
@@ -53,23 +55,24 @@ function Login() {
     const new_pass = e.target.value;
     setPswrdValues({ password: new_pass });
 
-    var lowerCase = /[a-z]/g;
-    var upperCase = /[A-Z]/g;
-    var numbers = /[0-9]/g;
+    let lowerCase = /[a-z]/g;
+    // let upperCase = /[A-Z]/g;
+    // let numbers = /[0-9]/g;
 
     if (!new_pass.match(lowerCase)) {
       setErrorpswrdMsg("Password should contain lowercase letters!");
-    } else if (!new_pass.match(upperCase)) {
-      setErrorpswrdMsg("Password should contain uppercase letters!");
-    } else if (!new_pass.match(numbers)) {
-      setErrorpswrdMsg("Password should contain numbers!");
-    } else if (new_pass.length < 10) {
-      setErrorpswrdMsg("Password length should be at least 10 characters.");
-    } else {
+    } 
+    // else if (!new_pass.match(upperCase)) {
+    //   setErrorpswrdMsg("Password should contain uppercase letters!");
+    // } else if (!new_pass.match(numbers)) {
+    //   setErrorpswrdMsg("Password should contain numbers!");
+    // } else if (new_pass.length < 10) {
+    //   setErrorpswrdMsg("Password length should be at least 10 characters.");
+    // } 
+    else {
       setErrorpswrdMsg("Password is strong!");
     }
   };
-
 
 
   //  post api 
@@ -78,16 +81,16 @@ function Login() {
      axios.post('https://reqres.in/api/login', {
       email: values.email,
       password: valuesPassword.password
-    })
-    .then(function (result) {
+    }).then(function (result) {
+    localStorage.setItem('token', result.data.token); 
+
+      navogateUrl("/dashboard");
       console.log(result);
     })
      .catch(function (error) {
       console.log(error);
      });
   }
-
-
 
 
   return (
@@ -134,3 +137,4 @@ function Login() {
 }
 
 export default Login;
+
