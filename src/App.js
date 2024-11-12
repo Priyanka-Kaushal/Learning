@@ -11,29 +11,9 @@ function App(){
                <Route exact path="/dashboard" element={<Protected><Dashboard /></Protected>}/>  
                 </Routes>
            </BrowserRouter>
-        // <Login/>
-        // <MatLogin/>
-        // <MainFunction />
-        // <MainPageItems />
-
-        // <StateUse />
-        
-
     );
 }
 
-// -----------------------------------------------
 
-// function App (){  
-//   return (
-//     <div className="tc">
-//     <h1> Robo freinds website</h1>
-//     <Search  />
-//     {/* <CardList robots = {robots}/> */}
-//     </div>
-//   );
-
-// }
 
 export default App; 
-// ------------------------------------------------------
